@@ -1,0 +1,12 @@
+# Node
+Frontend/node_modules/
+Frontend/.env
+
+# Java
+AlbumApi/target/
+AlbumApi/.env
+
+# OS/IDE
+.DS_Store
+*.iml
+*.log

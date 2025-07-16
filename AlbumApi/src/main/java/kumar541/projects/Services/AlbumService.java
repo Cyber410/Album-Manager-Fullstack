@@ -1,0 +1,33 @@
+package kumar541.projects.Services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kumar541.projects.Modal.Album;
+import kumar541.projects.Repository.AlbumRepository;
+
+@Service
+public class AlbumService {
+
+    @Autowired
+    private AlbumRepository albumRepository;
+
+    public Album save(Album album){
+        return albumRepository.save(album);
+    }
+
+    public List<Album> findByAccount_id(Long id){
+        return albumRepository.findByAccount_id(id);
+    }
+    
+    public Optional<Album> findById(Long id){
+        return albumRepository.findById(id);
+    }
+
+    public void deleteAlbum(Album album) {
+        albumRepository.delete(album);
+    }
+}
